@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>The number guessing game</title>
+  </head>
+  <body>
+
+  <script language = "javascript" type = "text/javascript">
+  <!-- Start hiding JavaScript statements
+    //Define script variables
+    var randomNo = 0;
+    var gameOver = false;
+    var keepPlaying = false;
+    var guess = "";
+    var msg = "I am thinking of a number from 1 - 10. Try to guess it:"
+    var reply = "";
+    //This loop allows the player to play as many games as desired
+while (gameOver == false) {
+
+  randomNo = 1 + Math.random() * 9; //Generate a random number
+                                    //from 1 - 10
+  randomNo = Math.round(randomNo);  //Turn the number into an integer
+
+  keepPlaying = false;  //Set value to indicate that the current
+                        //round of play should continue
+   
+  //Loop until the player guesses the secret number
+  while (keepPlaying == false) {
+
+    //Prompt the player to guess the secret number
+    guess = window.prompt(msg + randomNo);
+
+    //Analyze the players guess
+    if (guess == randomNo) {   //See if the player guessed the number
+
+      window.alert("Correct! You guessed the number.");
+      reply = window.prompt("Would you like to play again? (y/n)");
+
+      if (reply == "y") {  //See if the player wants to play again
+        keepPlaying = true;
+        gameOver = false;
+      } else {             //Let the current round of play continue
+        keepPlaying = true;
+        gameOver = true;
+      }
+    } else {
+      if (guess > randomNo) { //See if the player's guess is too high
+        window.alert("Incorrect. You guess was too high.");
+      } else {                //See if the player's guess is too low
+        window.alert("Incorrect. Your guess was too low.");
+      }
+    }
+  }
+
+}
+
+window.alert("Game over. Thanks for playing.");  //Thank the player
+  // End hiding JavaScript statements -->
+  </script>
+
+</body>
+</html>

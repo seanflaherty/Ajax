@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <script language="javascript" type="text/javascript">
+    <!-- Start hiding JavaScript statements
+    var Request = false;
+    if (window.XMLHttpRequest) {
+      Request = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+      Request = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    function TellStory(url) {
+      if (Request) {
+        Request.open("GET", url);
+        Request.onreadystatechange = function() {
+          if (Request.readyState == 4 && Request.status == 200) {
+            ModifyDOM(Request.responseText)
+            UpdateInterface(url)
+          }
+        }
+        Request.send(null);
+      }
+    }
+
+    function ModifyDOM(storyText) {
+      var newText = document.createTextNode(storyText);
+      var newLine = document.createElement("p");
+      document.getElementById('trgtP').appendChild(newLine);
+      document.getElementById('trgtP').appendChild(newText);
+    }
+
+    function UpdateInterface(selection) {
+        if (selection == "Part1.txt") appForm.Button1.disabled = "disabled";
+        if (selection == "Part2.txt") appForm.Button2.disabled = "disabled";
+        if (selection == "Part3.txt") appForm.Button3.disabled = "disabled";
+        if (selection == "Part4.txt") appForm.Button4.disabled = "disabled";
+      }
+      // End hiding JavaScript statements -->
+  </script>
+  <title>Welcome to the Ajax Story</title>
+</head>
+
+<body>
+  <h1>Ajax Story of the Day</h1>
+  <form name="appForm">
+    <input name="Button1" type="button" value="Part 1" onclick="TellStory('Part1.txt')">
+    <input name="Button2" type="button" value="Part 2" onclick="TellStory('Part2.txt')">
+    <input name="Button3" type="button" value="Part 3" onclick="TellStory('Part3.txt')">
+    <input name="Button4" type="button" value="Part 4" onclick="TellStory('Part4.txt')">
+  </form>
+  <hr>
+  <p id="trgtP">
+    <p>
+</body>
+
+</html>

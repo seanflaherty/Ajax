@@ -1,0 +1,138 @@
+<html>
+
+<head>
+  <script language="javascript" type="text/javascript">
+    <!-- Start hiding JavaScript statements
+    var totalScore = 0; //Define a variable uses to count correct answers
+    var response = ""; //Define a variable used to store player input
+    var grade = "F"; //Define a variable used to store the player's grade
+
+    //Greet the user and display quiz instructions
+    function DisplayGreeting() {
+
+      window.alert("Welcome to the Seinfeld Quiz. You will be asked " +
+        "to type in answers to 5 questions. Each answer must be the " +
+        "spoken name of one of the characters on the show. You must " +
+        "answer at least 3 questions correctly to pass the quiz. " +
+        "Click on OK to begin.\n\n Good luck!");
+    }
+
+    //Present the quiz and analyze the user's answers
+    function AdministerQuiz() {
+      //Ask the first quiz question
+      response = window.prompt("Who lives across the hall from Jerry?", "");
+      response = response.toUpperCase();
+
+      //Analyze the player's input
+      if (response == "KRAMER") { //Validate player input
+        window.alert("Correct!");
+        totalScore++;
+      } else {
+        window.alert("Incorrect. The correct answer is Kramer.");
+      }
+
+      //Ask the second quiz question
+      response = window.prompt("Who delivers the mail?", "");
+      response = response.toUpperCase();
+
+      //Analyze the player's input
+      if (response == "NEWMAN") { //Validate player input
+        window.alert("Correct!");
+        totalScore++;
+      } else {
+        window.alert("Incorrect. The correct answer is Newman.");
+      }
+
+      //Ask the third quiz question
+      response = window.prompt("Who worked for a clothing catalog " +
+        "company?", "");
+      response = response.toUpperCase();
+
+      //Analyze the player's input
+      if (response == "ELAINE") { //Validate player input
+        window.alert("Correct!");
+        totalScore++;
+      } else {
+        window.alert("Incorrect. The correct answer is Elaine.");
+      }
+
+      //Ask the fourth quiz question
+      response = window.prompt("Who went to high school with Jerry?", "");
+      response = response.toUpperCase();
+
+      //Analyze the player's input
+      if (response == "GEORGE") { //Validate player input
+        window.alert("Correct!");
+        totalScore++;
+      } else {
+        window.alert("Incorrect. The correct answer is George.");
+      }
+
+      //Ask the fifth quiz question
+      response = window.prompt("Who has problems with germs?", "");
+      response = response.toUpperCase();
+
+      //Analyze the player's input
+      if (response == "JERRY") { //Validate player input
+        window.alert("Correct!");
+        totalScore++;
+      } else {
+        window.alert("Incorrect. The correct answer is Jerry.");
+      }
+
+    }
+
+    //Determine the player's grade
+    function GradeQuiz() {
+      //Assign a letter grade based on the number of correct answers
+      switch (totalScore) {
+        case 0:
+          grade = "F";
+          break;
+        case 1:
+          grade = "F";
+          break;
+        case 2:
+          grade = "D";
+          break;
+        case 3:
+          grade = "C";
+          break;
+        case 4:
+          grade = "B";
+          break;
+        case 5:
+          grade = "A";
+          break;
+      }
+
+      //Two or more correct answer resulting in a passing grade
+      if (totalScore > 1) {
+        window.alert("You passed. You got " + totalScore + " correct. " +
+          "Your grade is an " + grade + ".");
+      } else {
+        window.alert("You failed. You got " + totalScore + " correct. " +
+          "Your grade is a " + grade + ".");
+      }
+
+    }
+
+    // End hiding JavaScript statements -->
+  </script>
+  <title>The Seinfeld Quiz</title>
+</head>
+
+<body>
+
+  <script language="javascript" type="text/javascript">
+    <!-- Start hiding JavaScript statements
+
+    DisplayGreeting() //Greet the user and display quiz instructions
+    AdministerQuiz() //Present the quiz and analyze the user's answers
+    GradeQuiz() //Determine the player's grade
+      // End hiding JavaScript statements -->
+  </script>
+
+</body>
+
+</html>

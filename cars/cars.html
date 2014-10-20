@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <title>Car dropdown test</title>
+  <script language="javascript" type="text/javascript">
+    var Request = false;
+    if (window.XMLHttpRequest) {
+      Request = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+      Request = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    function getmodels() {
+      var select = document.getElementById("make");
+      var make = select.options[select.selectedIndex].text;
+      if (Request) {
+        var URL = "cars.php?make=" + make;
+        Request.open("GET", URL);
+        Request.onreadystatechange = function() {
+          if (Request.readyState == 4 && Request.status == 200) {
+            var responseString = Request.responseText;
+            eval(responseString);
+          }
+        }
+        Request.send(null);
+      }
+    }
+
+    function populatemodels(model1, model2, model3) {
+      var model = document.getElementById('model');
+      model.options[0] = new Option(model1);
+      model.options[1] = new Option(model2);
+      model.options[2] = new Option(model3);
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Find your car</h2>
+  Make:
+  <select id="make" onchange="getmodels()">
+    <option value="">Select the make</option>
+    <option value="buick">Buick</option>
+    <option value="chevy">Chevy</option>
+    <option value="chrysler">Chrysler</option>
+    <option value="ford">Ford</option>
+  </select>
+  <br />
+  <br />Model:
+  <select id="model">
+    <option value="">Select make first</option>
+  </select>
+</body>
+
+</html>

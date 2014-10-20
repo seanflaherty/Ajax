@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>XYZ Website</title>
+    <script language = "javascript" type = "text/javascript">
+    <!-- Start hiding JavaScript statements
+      var Request = false;
+      if (window.XMLHttpRequest) {
+        Request = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        Request = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      function updatePage(category, target) {
+        if(Request) {
+          var targetDiv = document.getElementById(target);
+          Request.open("POST", "options_POST.php");
+          Request.setRequestHeader('Content-Type',
+            'application/x-www-form-urlencoded');
+          Request.onreadystatechange = function() {
+            if (Request.readyState == 4 && Request.status == 200) {
+              targetDiv.innerHTML = Request.responseText;
+            }
+          }
+          Request.send("category=" + category);
+        }
+      }
+    // End hiding JavaScript statements -->
+    </script>
+  </head>
+  <body>
+    <img src = "home.jpg" onmouseover="updatePage('home', 'TrgtDiv')">
+    <img src = "products.jpg" onmouseover="updatePage('products',
+      'TrgtDiv')">
+    <img src = "downloads.jpg" onmouseover="updatePage('downloads',
+      'TrgtDiv')">
+    <img src = "forums.jpg" onmouseover="updatePage('forums', 'TrgtDiv')">
+    <img src = "about.jpg" onmouseover="updatePage('about', 'TrgtDiv')">
+    <h1> <div id = "TrgtDiv"> </div> </h1>
+  </body>
+</html>

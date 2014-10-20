@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<question>
+  <hint>Hint 1: I was the first president of the United States of America.
+  </hint>
+  <hint>Hint 2: I am famous for chopping down a cherry tree.</hint>
+  <hint>Hint 3: My face is on the one dollar bill.</hint>
+  <question>Am I George Washington or Abraham Lincoln?</question>
+  <answer>George Washington</answer>
+</question>

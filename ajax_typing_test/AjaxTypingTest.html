@@ -1,0 +1,113 @@
+<html>
+
+<head>
+  <script language="javascript" type="text/javascript">
+    <!-- Start hiding JavaScript statements
+    var Request1 = false;
+    var Request2 = false;
+    var Request3 = false;
+    var sentence1 = "";
+    var sentence2 = "";
+    var sentence3 = "";
+    var numberCorrect;
+
+    if (window.XMLHttpRequest) {
+      Request1 = new XMLHttpRequest();
+      Request2 = new XMLHttpRequest();
+      Request3 = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+      Request1 = new ActiveXObject("Microsoft.XMLHTTP");
+      Request2 = new ActiveXObject("Microsoft.XMLHTTP");
+      Request3 = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    function startQuiz() {
+      document.getElementById("inputField1").value = "";
+      document.getElementById("inputField2").value = "";
+      document.getElementById("inputField3").value = "";
+      document.getElementById("trgtP").innerHTML = "";
+      if (Request1) {
+        var RequestObj1 = document.getElementById("trgtDiv1");
+        Request1.open("GET", "challenge1.txt");
+        Request1.onreadystatechange = function() {
+          if (Request1.readyState == 4 && Request1.status == 200) {
+            RequestObj1.innerHTML = Request1.responseText;
+            sentence1 = Request1.responseText;
+          }
+        }
+        Request1.send(null);
+      }
+      if (Request2) {
+        var RequestObj2 = document.getElementById("trgtDiv2");
+        Request2.open("GET", "challenge2.txt");
+        Request2.onreadystatechange = function() {
+          if (Request2.readyState == 4 && Request2.status == 200) {
+            RequestObj2.innerHTML = Request2.responseText;
+            sentence2 = Request2.responseText;
+          }
+        }
+        Request2.send(null);
+      }
+      if (Request3) {
+        var RequestObj3 = document.getElementById("trgtDiv3");
+        Request3.open("GET", "challenge3.txt");
+        Request3.onreadystatechange = function() {
+          if (Request3.readyState == 4 && Request3.status == 200) {
+            RequestObj3.innerHTML = Request3.responseText;
+            sentence3 = Request3.responseText;
+          }
+        }
+        Request3.send(null);
+      }
+    }
+
+    function gradeQuiz() {
+      numberCorrect = 0;
+      var result1 = document.getElementById("inputField1").value;
+      var result2 = document.getElementById("inputField2").value;
+      var result3 = document.getElementById("inputField3").value;
+      var score = document.getElementById("trgtP");
+      if (sentence1 == result1) {
+        numberCorrect++
+      }
+      if (sentence2 == result2) {
+        numberCorrect++
+      }
+      if (sentence3 == result3) {
+        numberCorrect++
+      }
+      score.innerHTML = "To pass you must type at least 2 " +
+        "out of 3 sentences correctly. You got " + numberCorrect +
+        " correct.";
+    }
+
+
+    // End hiding JavaScript statements -->
+  </script>
+  <title>Ajax Typing Challenge</title>
+</head>
+
+<body>
+  <h1 style="color:blue">Ajax Typing Challenge</h1>
+  <form>
+    <p>Click "Begin Test" when you are ready to begin, and then type the sentences that are displayed in the text fields displayed below each sentence. When done, click "Grade Test."
+    </p>
+    <input type="button" value="Begin Test" id="btnControl1" onclick=s tartQuiz()>
+    <input type="button" value="Grade Test" id="btnControl2" onclick=g radeQuiz()>
+    <p>
+      <div id="trgtDiv1"></div>
+    </p>
+    <input type="textfield" size="100" id="inputField1">
+    <p>
+      <div id="trgtDiv2"></div>
+    </p>
+    <input type="textfield" size="100" id="inputField2">
+    <p>
+      <div id="trgtDiv3"></div>
+    </p>
+    <input type="textfield" size="100" id="inputField3">
+  </form>
+  <p style="color:red; font-weight:Bold" id="trgtP"></p>
+</body>
+
+</html>

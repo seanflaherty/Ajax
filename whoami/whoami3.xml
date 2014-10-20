@@ -1,0 +1,9 @@
+<?xml version = "1.0"?>
+<question>
+  <hint>Hint 1: I was Prime Minister of Great Britain during WWII.</hint>
+  <hint>Hint 2: I was well-known for my ability to make extraordinary
+    speeches.</hint>
+  <hint>Hint 3: I was once the First Lord of the Admiralty.</hint>
+  <question>Am I Dwight Eisenhower or Winston Churchill?</question>
+  <answer>Winston Churchill</answer>
+</question>

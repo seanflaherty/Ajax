@@ -1,0 +1,8 @@
+<?xml version = "1.0"?>
+<question>
+  <hint>Hint 1: I was the president of the Second Continental Congress.</hint>
+  <hint>Hint 2: I was the governor of Massachusetts.</hint>
+  <hint>Hint 3: I am famous for the size of my signature.</hint>
+  <question>Am I John Adams or John Hancock?</question>
+  <answer>John Hancock</answer>
+</question>

@@ -1,0 +1,8 @@
+<?xml version = "1.0"?>
+<question>
+  <hint>Hint 1: I was a famous French soldier.</hint>
+  <hint>Hint 2: I was born in Corsica.</hint>
+  <hint>Hint 3: I had a bad day at Waterloo.</hint>
+  <question>Am I Stonewall Jackson or Napoleon Bonaparte?</question>
+  <answer>Napoleon Bonaparte</answer>
+</question>

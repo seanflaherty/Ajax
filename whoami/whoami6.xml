@@ -1,0 +1,8 @@
+<?xml version = "1.0"?>
+<question>
+  <hint>Hint 1: I was emperor of the Roman Empire.</hint>
+  <hint>Hint 2: I commanded the Roman invasion of Britain in 55 B.C.</hint>
+  <hint>Hint 3: I conquered Gaul.</hint>
+  <question>Am I Marcus Brutus or Julius Caesar?</question>
+  <answer>Julius Caesar</answer>
+</question>
